@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎鑫鑫</title>
+    <link rel="icon" href="./xinxin.jpg">
+    <style>
+        body{
+            background:url(./images/bjt12.jpg)no-repeat;
+            background-size: 1280px 640px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 800px;
+            height: 300px;
+            border: 2px solid #000;
+            margin: 250px auto;
+            background-color: black;
+
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 动画播放暂停效果 */
+        .box:hover ul{
+            /* paused 暂停 */
+            animation-play-state: paused;
+        }
+
+        .box img{
+            width: 400px;
+            height: 300px;
+        }
+
+        /* 先让所有图片的透明度变暗 */
+        .box:hover li{
+            opacity: 0.5;
+        }
+
+        /* 鼠标放到哪个具体的li上 哪个li透明度为1 不透明 */
+        .box li:hover{
+            opacity: 1;
+        }
+        
+        .box ul{
+            /* 将一共六张图片都放进来,每张是400px */
+            width: 2400px;
+
+
+            position: absolute;
+            left: 0;
+            top: 0px;
+
+            /* 应用动画 */
+            animation: play 10s linear infinite;
+        }
+        .box li {
+            float: left;
+
+        }
+
+        /* 定义动画 */
+        @keyframes play{
+            from{
+                left: 0;
+            }
+            to{
+                /* 前四张图运动完,动画就结束(第二次动画要开始),将后两张图片留在box里,防止出现空白 */
+                left: -1600px;
+            }
+        }
+        .end{
+            position: absolute;
+            right: 20px;
+            bottom: 300px;
+            width: 180px;
+            height: 70px;
+            padding-top: 25px;
+            padding-left: 30px;
+            box-sizing: border-box;
+            background-color: rgb(255, 174, 0);
+            border-radius: 50%;
+            color: slategray;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 用小盒套了一个大盒 小盒是显示区域,大盒是放所有图片 -->
+    <div class="box">
+        <ul>
+            <li>
+                <img src="./images/gd6.jpg" alt=""> 
+            </li>
+            <li>
+                <img src="./images/gd2.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/gd3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/gd4.jpg" alt="">
+            </li>
+
+            <!-- 后两张图片要求和开始的两张图片相同 -->
+            <li>
+                <img src="./images/gd6.jpg" alt=""> 
+            </li>
+            <li>
+                <img src="./images/gd2.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <a href="./mofang.html"target="_blank">
+        <div class="end">进入崭新的20岁→</div>
+    </a> 
+</body>
+</html>

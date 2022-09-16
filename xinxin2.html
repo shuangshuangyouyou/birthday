@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鑫鑫的主页</title>
+    <link rel="icon" href="./xinxin.jpg">
+    <style>
+        body{
+            background-color: #fff59e;
+            /* font-size: 40px; */
+            /* color:white; */
+        }
+        .kuang{
+            width: 200px;
+            height: 495px;
+            border: 5px solid #ffec46;
+            margin: 10px auto;
+            font-size: 20px;
+            background-color: pink;
+            color: #ffec46;
+            font-weight: 700;
+            position: relative;
+            perspective: 1000px;
+        }
+        .kuang .men{
+            /* 定义旋转轴 */
+            transform-origin: right;
+            transform-style:preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            /* 过渡 */
+            transition: all 1s;
+        }
+        .kuang .cp{
+            width: 200px;
+            height: 95px;
+            padding: 30px;
+        }
+        .kuang:hover .men{
+            transform: rotateY(-90deg);
+        }
+        .kuang .liu{
+            width: 160px;
+            /* height: 230px; */
+
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .kuang .chen{
+            width: 160px;
+            /* height: 230px; */
+
+            position: absolute;
+            bottom: 200px;
+            left: 20px;
+        }
+        .box{
+            width: 80px;
+            height: 35px;
+            background-color: #fff065;
+            padding: 8px;
+            color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+        }
+        .box1{
+            position: absolute;
+            left: 200px;
+            top: 150px;
+            transform: rotate(-50deg);
+        }
+        .box2{
+            position: absolute;
+            left: 1000px;
+            top: 150px;
+            transform: rotate(30deg);
+        }
+        .box3{
+            position: absolute;
+            left: 300px;
+            top: 350px;
+            transform: rotate(40deg);
+        }
+        .box4{
+            position: absolute;
+            left: 900px;
+            top: 350px;
+            transform: rotate(-20deg);
+        }
+        .box5{
+            position: absolute;
+            left: 150px;
+            top: 550px;
+            transform: rotate(-50deg);
+        }
+        .box6{
+            position: absolute;
+            left: 1100px;
+            top: 400px;
+            transform: rotate(-50deg);
+        }
+        span{
+            display: block;
+            /* margin-top: 200px; */
+            /* box-sizing: border-box; */
+            text-align: center;
+            font-size: 40px;
+            color: #fff59e;
+            text-shadow: 1px 1px 1px rgb(255, 255, 255),-1px -1px 1px rgb(255, 188, 2);
+        }
+        .end{
+            position: absolute;
+            right: 20px;
+            bottom: 30px;
+            width: 180px;
+            height: 70px;
+            padding-top: 25px;
+            padding-left: 30px;
+            box-sizing: border-box;
+            background-color: rgba(245, 169, 7,0.5);
+            border-radius: 50%;
+            color: slategray;
+        }
+    </style>
+</head>
+<body>
+    <span>开门有惊喜呦!</span>
+    <div class="kuang">
+        <div class="cp">恭喜你已进入<br>通往快乐的大门<br>希望你一直快乐!</div>
+        <img class="liu"src="./images/zp1.jpg" alt="">
+        <img class="chen" src="./images/zp3.jpg" alt="">
+        <img class="men"src="./images/men.jpg" alt="">
+    </div>
+    <div class="box1 box">开心快乐</div>
+    <div class="box2 box">无忧无虑</div>
+    <div class="box3 box">吃好喝好</div>
+    <div class="box4 box">暴瘦暴富</div>
+    <div class="box5 box">诸事顺利</div>
+    <div class="box6 box">事事如意</div>
+    <a href="./heka.html"target="_blank">
+        <div class="end">进入崭新的20岁→</div>
+    </a>    
+</body>
+</html>
